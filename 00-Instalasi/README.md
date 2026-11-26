@@ -1,7 +1,6 @@
 # 00-Instalasi
 
-> **Duration:** Minggu 1-2 (7 hari)  
-> **Status:** ✅ **COMPLETED**
+> **Duration:** Minggu 1-2 (7 hari)
 
 ---
 
@@ -10,52 +9,52 @@
 ```
 00-Instalasi/
 ├── 00-arsitektur/
-│   └── arsitektur-konsep-dasar.md      # Arsitektur, Storage Engine, ACID, MVCC, InnoDB internals
+│   └── README.md      # Arsitektur, Storage Engine, ACID, MVCC, InnoDB internals
 ├── 01-instalasi/
-│   └── instalasi-setup-awal.md         # Install (repo, tarball, docker), secure, my.cnf, systemd, upgrade
+│   └── README.md         # Install (repo, tarball, docker), secure, my.cnf, systemd, upgrade
 └── 02-autentikasi/
-    └── koneksi-autentikasi.md          # User+Host, Auth plugins, Privileges, Roles, SSL/TLS, Monitoring
+    └── README.md          # User+Host, Auth plugins, Privileges, Roles, SSL/TLS, Monitoring
 ```
 
 ---
 
-## ✅ Checklist
+## 📋 Kurikulum
 
 ### Arsitektur & Konsep Dasar
-- [x] Arsitektur 3-layer (Client, SQL, Storage Engine) + background threads
-- [x] Storage Engine comparison: InnoDB vs MyISAM vs Aria vs ColumnStore vs Spider
-- [x] ACID di InnoDB: Redo log, Undo log, MVCC
-- [x] 4 Isolation Levels & locking behavior
-- [x] MariaDB vs MySQL perbedaan kunci (minimal 5 poin)
-- [x] File & direktori penting: datadir, config, logs, socket
-- [x] Praktikum: MVCC experiment, `SHOW ENGINE INNODB STATUS` reading
+- Arsitektur 3-layer (Client, SQL, Storage Engine) + background threads
+- Storage Engine comparison: InnoDB vs MyISAM vs Aria vs ColumnStore vs Spider
+- ACID di InnoDB: Redo log, Undo log, MVCC
+- 4 Isolation Levels & locking behavior
+- MariaDB vs MySQL perbedaan kunci (minimal 5 poin)
+- File & direktori penting: datadir, config, logs, socket
+- Praktikum: MVCC experiment, `SHOW ENGINE INNODB STATUS` reading
 
 ### Instalasi & Setup Awal
-- [x] Install via Repository (Ubuntu/Debian, RHEL/Rocky/Alma, openSUSE)
-- [x] Install via Binary Tarball (multiple instances, non-root)
-- [x] Install via Docker (development/testing)
-- [x] `mariadb-secure-installation` walkthrough
-- [x] Config file priority & modern structure (`mariadb.conf.d/99-custom.cnf`)
-- [x] Production-ready `my.cnf` template dengan parameter kritis
-- [x] Systemd management: start/stop/restart/enable/logs/override limits
-- [x] Multiple instances: `mysqld_multi` & systemd template
-- [x] Minor upgrade procedure & post-upgrade checklist
-- [x] Config validation dengan `--validate-config`
-- [x] Troubleshooting common install errors
+- Install via Repository (Ubuntu/Debian, RHEL/Rocky/Alma, openSUSE)
+- Install via Binary Tarball (multiple instances, non-root)
+- Install via Docker (development/testing)
+- `mariadb-secure-installation` walkthrough
+- Config file priority & modern structure (`mariadb.conf.d/99-custom.cnf`)
+- Production-ready `my.cnf` template dengan parameter kritis
+- Systemd management: start/stop/restart/enable/logs/override limits
+- Multiple instances: `mysqld_multi` & systemd template
+- Minor upgrade procedure & post-upgrade checklist
+- Config validation dengan `--validate-config`
+- Troubleshooting common install errors
 
 ### Koneksi & Autentikasi
-- [x] User = User + Host concept & host matching priority
-- [x] 8 Authentication plugins: native, caching_sha2, unix_socket, PAM, LDAP, GSSAPI, ed25519, clear_password
-- [x] User CRUD: CREATE/ALTER/RENAME/DROP USER dengan opsi lengkap
-- [x] Password policies: validate_password, expiration, history, reuse, failed login tracking
-- [x] Privilege hierarchy: Global → Database → Table → Column → Procedure
-- [x] Grant patterns: read-only, read-write, admin, replication, backup
-- [x] Roles (RBAC): create, grant to role, grant role to user, default role, nested roles
-- [x] SSL/TLS: Generate certs (OpenSSL), server/client config, REQUIRE SSL/X509
-- [x] Connection types: Unix socket vs TCP/IP vs Thread pool
-- [x] Connection pooling (app side: Python, Java/HikariCP)
-- [x] Monitoring: SHOW PROCESSLIST, performance_schema.threads, kill queries
-- [x] Troubleshooting auth errors
+- User = User + Host concept & host matching priority
+- 8 Authentication plugins: native, caching_sha2, unix_socket, PAM, LDAP, GSSAPI, ed25519, clear_password
+- User CRUD: CREATE/ALTER/RENAME/DROP USER dengan opsi lengkap
+- Password policies: validate_password, expiration, history, reuse, failed login tracking
+- Privilege hierarchy: Global → Database → Table → Column → Procedure
+- Grant patterns: read-only, read-write, admin, replication, backup
+- Roles (RBAC): create, grant to role, grant role to user, default role, nested roles
+- SSL/TLS: Generate certs (OpenSSL), server/client config, REQUIRE SSL/X509
+- Connection types: Unix socket vs TCP/IP vs Thread pool
+- Connection pooling (app side: Python, Java/HikariCP)
+- Monitoring: SHOW PROCESSLIST, performance_schema.threads, kill queries
+- Troubleshooting auth errors
 
 ---
 

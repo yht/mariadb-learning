@@ -1,7 +1,6 @@
 # Phase 1.2: Instalasi & Setup Awal MariaDB
 
-> **Target:** Minggu 1 (Hari 4-5)  
-> **Status:** `[ ]` Belum mulai · `[ ]` Sedang dikerjakan · `[x]` Selesai
+> **Target:** Minggu 1 (Hari 4-5)
 
 ---
 
@@ -644,22 +643,6 @@ mariadb -u root -p -e "SET GLOBAL long_query_time = 0.5; SHOW VARIABLES LIKE 'lo
 # Persist ke config
 sudo sed -i 's/long_query_time = 1/long_query_time = 0.5/' /etc/mysql/mariadb.conf.d/99-custom.cnf
 ```
-
----
-
-## 10. Checklist Phase 1.2
-
-- [ ] Bisa install MariaDB via repository (Ubuntu/Debian/RHEL)
-- [ ] Bisa install via binary tarball untuk multiple instances
-- [ ] Bisa install via Docker untuk development
-- [ ] Menjalankan `mariadb-secure-installation` & memahami setiap pertanyaan
-- [ ] Memahami urutan prioritas config file (my.cnf)
-- [ ] Membuat `99-custom.cnf` dengan parameter production-ready
-- [ ] Memahami parameter kritis: `innodb_buffer_pool_size`, `innodb_flush_log_at_trx_commit`, `binlog_format`
-- [ ] Bisa manage systemd: start, stop, restart, enable, logs, override limits
-- [ ] Bisa setup multiple instances (mysqld_multi atau systemd template)
-- [ ] Melakukan minor upgrade & post-upgrade verification
-- [ ] Validasi config dengan `--validate-config` sebelum restart
 
 ---
 

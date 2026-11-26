@@ -1,7 +1,6 @@
 # Phase 1.3: Koneksi & Autentikasi MariaDB
 
-> **Target:** Minggu 1 (Hari 6-7)  
-> **Status:** `[ ]` Belum mulai · `[ ]` Sedang dikerjakan · `[x]` Selesai
+> **Target:** Minggu 1 (Hari 6-7)
 
 ---
 
@@ -764,27 +763,6 @@ SELECT * FROM performance_schema.threads WHERE TYPE='FOREGROUND'\G
 -- Kill long query
 KILL QUERY <thread_id>;
 ```
-
----
-
-## 12. Checklist Phase 1.3
-
-- [ ] Memahami konsep User = User + Host (bukan cuma username)
-- [ ] Bisa menjelaskan prioritas host matching (spesifik → wildcard)
-- [ ] Menghafal minimal 5 authentication plugin & use case masing-masing
-- [ ] Bisa create/alter/drop/rename user dengan berbagai opsi
-- [ ] Memahami resource limits: MAX_QUERIES_PER_HOUR, MAX_USER_CONNECTIONS, dll
-- [ ] Setup validate_password plugin dengan policy MEDIUM/STRONG
-- [ ] Konfigurasi password expiration, history, reuse interval, failed login tracking
-- [ ] Memahami privilege hierarchy: Global → Database → Table → Column → Procedure
-- [ ] Bisa grant/revoke privileges untuk read-only, read-write, admin, replication, backup
-- [ ] Memahami Roles (RBAC): create role, grant to role, grant role to user, default role
-- [ ] Generate SSL certificates dengan OpenSSL
-- [ ] Konfigurasi server & client SSL di my.cnf
-- [ ] Create user REQUIRE SSL / REQUIRE X509
-- [ ] Memahami connection types: Unix socket vs TCP/IP vs Thread pool
-- [ ] Monitoring connections: SHOW PROCESSLIST, performance_schema.threads
-- [ ] Kill query vs kill connection vs kill user
 
 ---
 

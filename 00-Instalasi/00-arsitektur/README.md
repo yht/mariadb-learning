@@ -1,7 +1,6 @@
 # Phase 1.1: Arsitektur & Konsep Dasar MariaDB
 
-> **Target:** Minggu 1 (Hari 1-3)  
-> **Status:** `[ ]` Belum mulai · `[ ]` Sedang dikerjakan · `[x]` Selesai
+> **Target:** Minggu 1 (Hari 1-3)
 
 ---
 
@@ -270,20 +269,6 @@ SHOW ENGINE INNODB STATUS \G
 -- Cari: "History list length"
 -- Normal: < 1000. Tinggi = long-running tx atau purge lambat
 ```
-
----
-
-## 8. Checklist Phase 1.1
-
-- [ ] Bisa menjelaskan arsitektur 3-layer (Client, SQL, Storage Engine)
-- [ ] Bisa menyebut minimal 5 background thread InnoDB & fungsinya
-- [ ] Bisa membandingkan InnoDB vs MyISAM vs Aria vs ColumnStore
-- [ ] Paham ACID di InnoDB: redo log, undo log, MVCC
-- [ ] Bisa jelaskan 4 isolation level & perbedaan locking
-- [ ] Tahu perbedaan utama MariaDB vs MySQL (minimal 5 poin)
-- [ ] Bisa locate file penting: datadir, config, logs, socket
-- [ ] Praktikum MVCC berhasil dijalankan & dipahami
-- [ ] Bisa baca `SHOW ENGINE INNODB STATUS` section BACKGROUND THREAD & HISTORY LIST
 
 ---
 
